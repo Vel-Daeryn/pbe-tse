@@ -53,3 +53,11 @@
     position: absolute;
     z-index: -1;
 }
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    .star-small, .star-medium, .star-large {
+        display: none;
+    }
+}
