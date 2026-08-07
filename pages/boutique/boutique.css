@@ -1,0 +1,74 @@
+:root {
+    --dark-text-color: #353535;
+    --white-text-color: #F2F3F4;
+
+    --background-main-color: #013162;
+    --background-heal: #FF97CD;
+    --background-shop: #FEA993;
+    --cta: #82CAFF;
+}
+
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* ------------------------------------ */
+/*                 FONTS                */
+/*------------------------------------- */
+
+@font-face {
+    font-family: "GermaniaOne";
+    src: url(./res/fonts/GermaniaOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: "NunitoSans" ;
+    src: url(./res/fonts/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf);
+}
+
+/* ------------------------------------ */
+/*          General Styling             */
+/*------------------------------------- */
+
+body {
+    font-size: clamp(1.125rem, 1.0673rem + 0.2564vw, 1.375rem);
+    font-family: "NunitoSans", sans-serif;
+    color: var(--black-text-color);
+    background-color: var(--background-shop);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: clamp(1.75rem, 1.3462rem + 1.7949vw, 3.5rem);
+    margin: 2rem auto;
+}
+
+h2 {
+    font-size: clamp(1.5rem, 1.1538rem + 1.5385vw, 3rem);
+}
+
+h3 {
+    font-size: clamp(1.25rem, 0.9615rem + 1.2821vw, 2.5rem);
+}
+
+h1, h2, h3 {
+    font-family: "GermaniaOne", Verdana, sans-serif;
+    text-transform: uppercase;
+    width: fit-content;
+    padding: 1.5rem 0;
+}
+
+p {
+    max-width: 60ch;
+    padding: 1.5rem;
+    line-height: 1.5;
+}
+
+cite {
+    text-align: right;
+}
