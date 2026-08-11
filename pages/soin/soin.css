@@ -6,6 +6,8 @@
     --background-heal: #FF97CD;
     --background-shop: #FEA993;
     --cta: #82CAFF;
+
+    --box-shadow: var(--dark-text-color) 0px 3px 15px;
 }
 
 *, *::after, *::before {
@@ -20,12 +22,12 @@
 
 @font-face {
     font-family: "GermaniaOne";
-    src: url(./res/fonts/GermaniaOne-Regular.ttf);
+    src: url(../../res/fonts/GermaniaOne-Regular.ttf);
 }
 
 @font-face {
     font-family: "NunitoSans" ;
-    src: url(./res/fonts/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf);
+    src: url(../../res/fonts/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf);
 }
 
 /* ------------------------------------ */
@@ -64,11 +66,80 @@ h1, h2, h3 {
 }
 
 p {
-    max-width: 60ch;
+    max-width: 65ch;
     padding: 1.5rem;
     line-height: 1.5;
 }
 
 cite {
     text-align: right;
+}
+
+main {
+    width: max(320px, 65%);
+}
+
+/* ------------------------------------ */
+/*          Element Styling             */
+/*------------------------------------- */
+
+.section-link {
+    text-decoration: none;
+    color: var(--dark-text-color);
+}
+
+section {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white-text-color);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    overflow: hidden;
+    transform: scale(.95);
+    transition: box-shadow 350ms ease-in-out;
+}
+
+img {
+    height: 350px;
+    width: 350px;
+    object-fit: contain;
+}
+
+.button-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--white-text-color);
+    background-color: #B809A9;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    width: fit-content;
+    margin: 0 auto;
+}
+
+/* ------------------------------------ */
+/*          Element State               */
+/*------------------------------------- */
+
+section:hover {
+    box-shadow: var(--dark-text-color) 0px 5px 25px 5px;
+}
+
+.button-link:hover svg {
+    animation: DingALing 800ms 150ms infinite ease-in-out;
+}
+
+@keyframes DingALing {
+    0% {
+       transform: rotate(0deg); 
+    }
+
+    50% {
+        transform: rotate(30deg);
+    }
 }

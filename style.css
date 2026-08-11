@@ -63,7 +63,7 @@ h1, h2, h3 {
 }
 
 p {
-    max-width: 60ch;
+    max-width: 65ch;
     padding: 1.5rem;
     line-height: 1.5;
 }
@@ -95,12 +95,17 @@ footer img {
 /* ------------------------------------ */
 /*           Element Styling            */
 /*------------------------------------- */
-.soin, .boutique {
+.soin, .boutique, .boutique-alt, .soin-alt {
     display: grid;
     justify-items: center;
     align-items: center;
     width: 650px;
     border-radius: 8px;
+}
+
+.boutique-alt, .soin-alt {
+    overflow: hidden;
+    height: 850px;
 }
 
 .soin {
@@ -113,7 +118,22 @@ footer img {
     color: var(--dark-text-color);
 }
 
-section > img {
+.boutique-alt, .soin-alt {
+    color: var(--white-text-color);
+    z-index: 10;
+}
+
+.boutique-alt > .background-img, .soin-alt > .background-img {
+    width: 650px;
+    height: 850px;
+    position: absolute;
+    object-fit: fill;
+    opacity: .2;
+    z-index: -10;
+    border-radius: 8px;
+}
+
+section > img, .boutique-alt > img, .soin-alt > img {
     width: 250px;
     height: 250px;
     object-fit: contain;
@@ -123,7 +143,12 @@ section p {
     text-align: center;
 }
 
-.link-button {
+.section-alt {
+    background-color: #013162;
+    border: 2px solid whitesmoke;
+}
+
+.link-button, .link-button-alt {
     display: block;
     color: var(--dark-text-color);
     text-decoration: none;
@@ -135,6 +160,10 @@ section p {
     margin: 1.5rem auto;
     box-shadow: 0px 3px 5px var(--dark-text-color);
     transition: box-shadow 250ms ease-in-out;
+}
+
+.link-button-alt {
+    box-shadow: 0 0 5px 0px whitesmoke;    
 }
 
 .shop-name {
@@ -172,6 +201,10 @@ main {
 
 .link-button:hover {
     box-shadow: 0 5px 15px 2px var(--dark-text-color);
+}
+
+.link-button-alt:hover {
+    box-shadow: 0 0 15px 2px whitesmoke;
 }
 
 footer img:hover {

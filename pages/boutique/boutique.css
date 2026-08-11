@@ -20,12 +20,12 @@
 
 @font-face {
     font-family: "GermaniaOne";
-    src: url(./res/fonts/GermaniaOne-Regular.ttf);
+    src: url(../../res/fonts/GermaniaOne-Regular.ttf);
 }
 
 @font-face {
     font-family: "NunitoSans" ;
-    src: url(./res/fonts/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf);
+    src: url(../../res/fonts/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf);
 }
 
 /* ------------------------------------ */
@@ -64,7 +64,7 @@ h1, h2, h3 {
 }
 
 p {
-    max-width: 60ch;
+    max-width: 65ch;
     padding: 1.5rem;
     line-height: 1.5;
 }
