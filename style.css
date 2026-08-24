@@ -3,8 +3,7 @@
     --white-text-color: #F2F3F4;
 
     --background-main-color: #013162;
-    --background-heal: #FF97CD;
-    --background-shop: #FEA993;
+    --accent-color: #FEA993;
     --cta: #82CAFF;
 }
 
@@ -37,13 +36,16 @@ body {
     font-family: "NunitoSans", sans-serif;
     color: var(--white-text-color);
     background-color: var(--background-main-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
 }
 
 h1 {
     font-size: clamp(1.75rem, 1.3462rem + 1.7949vw, 3.5rem);
     background-color: var(--background-main-color);
     margin: 2rem auto;
-    text-decoration: underline 3px solid var(--background-shop);
+    text-decoration: underline 3px solid var(--accent-color);
     text-underline-offset: 10px;
 }
 
@@ -80,7 +82,7 @@ footer {
     margin-top: 1.5rem;
     padding: 1rem 2rem 0.15rem;
     background-color: var(--background-main-color);
-    border-top: var(--background-shop) 2px solid;
+    border-top: var(--accent-color) 2px solid;
 }
 
 footer img {
@@ -95,15 +97,12 @@ footer img {
 /* ------------------------------------ */
 /*           Element Styling            */
 /*------------------------------------- */
-.soin, .boutique, .boutique-alt, .soin-alt {
+.soin, .boutique {
     display: grid;
     justify-items: center;
     align-items: center;
     width: 650px;
     border-radius: 8px;
-}
-
-.boutique-alt, .soin-alt {
     overflow: hidden;
     height: 850px;
 }
@@ -113,17 +112,12 @@ footer img {
     color: var(--dark-text-color);
 }
 
-.boutique {
-    background-color: var(--background-shop);
-    color: var(--dark-text-color);
-}
-
-.boutique-alt, .soin-alt {
+.boutique, .soin{
     color: var(--white-text-color);
     z-index: 10;
 }
 
-.boutique-alt > .background-img, .soin-alt > .background-img {
+.boutique > .background-img, .soin > .background-img {
     width: 650px;
     height: 850px;
     position: absolute;
@@ -133,7 +127,7 @@ footer img {
     border-radius: 8px;
 }
 
-section > img, .boutique-alt > img, .soin-alt > img {
+section > img {
     width: 250px;
     height: 250px;
     object-fit: contain;
@@ -143,12 +137,12 @@ section p {
     text-align: center;
 }
 
-.section-alt {
+.section {
     background-color: #013162;
     border: 2px solid whitesmoke;
 }
 
-.link-button, .link-button-alt {
+.link-button {
     display: block;
     color: var(--dark-text-color);
     text-decoration: none;
@@ -158,12 +152,8 @@ section p {
     padding: 1rem 2rem;
     border-radius: 8px;
     margin: 1.5rem auto;
-    box-shadow: 0px 3px 5px var(--dark-text-color);
+    box-shadow: 0 0 5px 0px whitesmoke;  
     transition: box-shadow 250ms ease-in-out;
-}
-
-.link-button-alt {
-    box-shadow: 0 0 5px 0px whitesmoke;    
 }
 
 .shop-name {
@@ -193,17 +183,13 @@ main {
     justify-content: center;
     gap: 3rem;
     flex-wrap: wrap;
+    flex: 1;
 }
 
 /* ------------------------------------ */
 /*            Interactions              */
 /*------------------------------------- */
-
 .link-button:hover {
-    box-shadow: 0 5px 15px 2px var(--dark-text-color);
-}
-
-.link-button-alt:hover {
     box-shadow: 0 0 15px 2px whitesmoke;
 }
 
@@ -228,6 +214,12 @@ footer img:hover {
     .soin, .boutique {
     width: 100%;
     border-radius: 0;
+    border-left: none;
+    border-right: none;
+    }
+
+    .soin {
+        border-bottom: none;
     }
 
     footer {
