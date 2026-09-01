@@ -115,7 +115,7 @@ header a {
     text-decoration: none;
 }
 
-header img {
+header img, header svg {
     width: 60px;
     height: 60px;
     object-fit: contain;
@@ -141,6 +141,13 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+
+ul li {
+    list-style: none;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    max-width: 65ch;
 }
 
 footer {
@@ -202,6 +209,7 @@ section {
 }
 
 main a .about-me {
+    position: relative;
     width: 400px;
     margin: auto;
 }
@@ -212,6 +220,24 @@ main a .about-me {
 
 .about-me-effect:hover {
     transform: scale(1.1);
+}
+
+.click-indicator {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    color: var(--white-text-color);
+    animation: emphasis 1200ms infinite ease-in-out;
+}
+
+@keyframes emphasis {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
 }
 
 img {
@@ -273,7 +299,8 @@ span {
 }
 
 span.highlight {
-    text-decoration: underline 1px;
+    text-decoration: underline 1px var(--accent-color);
+    text-underline-offset: 5px;
 }
 
 .text-img {
