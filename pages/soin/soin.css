@@ -141,6 +141,7 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin-top: 2rem;
 }
 
 ul li {
@@ -189,10 +190,24 @@ main a {
 }
 
 .section-link {
+    position: relative;
     text-decoration: none;
     color: var(--dark-text-color);
     width: 400px;
     display: block;
+}
+
+.section-link .soin-distance {
+    position: absolute;
+    z-index: 9;
+    right : 15px;
+    top: 15px;
+    color: var(--white-text-color);
+    background-color: var(--dark-text-color);
+    width: 65px;
+    height: 65px;
+    padding: 10px;
+    border-radius: 50%;
 }
 
 section {
@@ -264,6 +279,15 @@ img {
 a .heal-section {
     width: 450px;
     height: 500px;
+}
+
+.distance {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0px 0px 5px 1px var(--accent-color);
+    border-radius: 8px;
+    background-color: var(--background-main-color);
 }
 
 section h2 {
@@ -373,6 +397,10 @@ footer img:hover {
         width: 320px;
         height: 420px;
         margin: 0 auto;
+    }
+
+    .section-link .soin-distance {
+        right : 75px;
     }
 
     footer {
