@@ -292,9 +292,15 @@ section h2 {
 
 .date {
     font-weight: 800;
-    display: flex;
-    align-self: center;
     gap: 15px;
+}
+
+.date svg {
+    transform: translateY(5px);
+}
+
+.clos {
+    color: red;
 }
 
 .events-container {
