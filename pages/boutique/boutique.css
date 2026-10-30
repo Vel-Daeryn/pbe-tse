@@ -238,15 +238,54 @@ section h2 {
     padding-bottom: 1rem;
 }*/
 
-.category-link {
+.encard {
+    text-align: center;
+    background-color: var(--dark-text-color);
+    color: var(--white-text-color);
+}
+
+.encard .construct {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.encard .construct svg {
+    color: var(--background-main-color);
+}
+
+.encard a {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+    color: var(--background-main-color);
+}
+
+.category-link, .object-link {
     display: flex;
     text-decoration: none;
     color: var(--white-text-color);
     box-shadow: 0px 0px 8px 3px var(--dark-text-color);
     border-radius: 8px;
     overflow: hidden;
+}
+
+.category-link {
     width: 450px;
+    height: 450px; 
+}
+
+.object-link {
+    width: 350px;
     height: 450px;
+}
+
+.object-link div {
+    position: relative;
+    width: 100%;
+    background-color: var(--white-text-color);
 }
 
 .category-link img {
@@ -257,10 +296,27 @@ section h2 {
     transition: transform 300ms ease-in-out;
 }
 
+.object-link img {
+    width: 100%;
+    height: calc(450px - 90px);
+    transition: transform 300ms ease-in-out;
+}
+
 .category-link .title {
     position: relative;
     top: -85px;
     background-color: rgba(0, 0, 0, 0.5);
+}
+
+.object-link .title {
+    position: relative;
+    top: -15px;
+    height: 100px;
+    background-color: var(--dark-text-color);
+    text-decoration: none;
+    font-size: clamp(1rem, 0.9351rem + 0.2885vw, 1.375rem);
+    display: flex;
+    align-items: center;
 }
 
 .title {
@@ -271,7 +327,16 @@ section h2 {
     text-underline-offset: 5px;
 }
 
-.category-link:hover img {
+.price-tag {
+    position: absolute;
+    top: 15px;
+    background: var(--cta);
+    color: var(--dark-text-color);
+    border-radius: 0 8px 8px 0;
+    padding: 0.5rem 1.2rem;
+}
+
+.category-link:hover img, .object-link:hover img {
     transform: scale(1.2);
 }
 
